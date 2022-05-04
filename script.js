@@ -28,13 +28,23 @@ const app = new Vue({
       }
 
     ],
-
-    
+    newTesto:'',
+ 
       
   },
   methods: {
     deleteToDo(index){
       this.todos.splice(index, 1);
+      console.log(this.newTesto);
+    },
+    addToDo(){
+      const newToDos= {
+        toDoItem:'',
+        done: false,
+      }
+      newToDos.toDoItem = this.newTesto;
+      this.todos.push(newToDos);
+      this.newTesto = '';
     }
   },
 
