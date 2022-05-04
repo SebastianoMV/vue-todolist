@@ -1,0 +1,16 @@
+.smv-container{
+  background-color: lightgray;
+  border-radius: 10px;
+  padding:20px;
+}
+
+ul{
+  list-style: none;
+}
+
+.cancellato{
+  text-decoration: line-through;
+}
+
+
+
