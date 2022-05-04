@@ -17,7 +17,7 @@
 
 
     <div class="container smv-container">
-      <input v-model.trim="newTesto" type="text">
+      <input v-model.trim="newTesto" type="text" @keyup.enter="addToDo">
       <button @click="addToDo">Aggiungi</button>
       <ul>
         <li v-for='(todo,index) in todos' class="d-flex justify-content-between my-3">
