@@ -34,12 +34,13 @@ const app = new Vue({
     ],
     newTesto:'',
  
-      
   },
   methods: {
     deleteToDo(index){
-      this.todos.splice(index, 1);
-      console.log(this.newTesto);
+      if(confirm(`Sei sicuro di aver finito di ${this.todos[index].toDoItem}?`)){
+        this.todos.splice(index, 1);
+        console.log(this.newTesto);
+      }
     },
     addToDo(){
       const newToDos= {
