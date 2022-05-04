@@ -19,12 +19,13 @@
     <div class="container smv-container">
       <input v-model.trim="newTesto" type="text" @keyup.enter="addToDo">
       <button @click="addToDo">Aggiungi</button>
-      <ul>
+      <ul v-if="todos.length > 0 ">
         <li v-for='(todo,index) in todos' class="d-flex justify-content-between my-3">
           <p :class="{'cancellato' : todo.done == true}" @click="todo.done = !todo.done">{{todos[index].toDoItem}}</p>
           <i class="fa-solid fa-trash-can" @click="deleteToDo(index)"></i>
         </li>
       </ul>
+      <h1 v-else> Hai completato la lista!</h1>
     </div>
     
   </div>
