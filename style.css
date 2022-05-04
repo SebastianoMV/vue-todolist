@@ -12,5 +12,8 @@ ul{
   text-decoration: line-through;
 }
 
+ul li i{
+  cursor: pointer;
+}
 
 

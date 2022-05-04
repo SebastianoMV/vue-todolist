@@ -13,7 +13,7 @@ const app = new Vue({
   el: '#app',
 
   data: {
-    todos:[
+    todos: [
        {
          toDoItem:'Fare la spesa',
          done: false
@@ -31,6 +31,11 @@ const app = new Vue({
 
     
       
+  },
+  methods: {
+    deleteToDo(index){
+      this.todos.splice(index, 1);
+    }
   },
 
 
