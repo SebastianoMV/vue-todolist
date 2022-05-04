@@ -21,7 +21,7 @@
       <button @click="addToDo">Aggiungi</button>
       <ul>
         <li v-for='(todo,index) in todos' class="d-flex justify-content-between my-3">
-          <p :class="{'cancellato' : todo.done == true}">{{todos[index].toDoItem}}</p>
+          <p :class="{'cancellato' : todo.done == true}" @click="todo.done = !todo.done">{{todos[index].toDoItem}}</p>
           <i class="fa-solid fa-trash-can" @click="deleteToDo(index)"></i>
         </li>
       </ul>
